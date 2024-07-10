@@ -10,6 +10,10 @@ const routes: Routes = [
   {
     path: 'restaurants',
     loadChildren: () => import('./pages/restaurant-list/restaurant-list.module').then( m => m.RestaurantListPageModule)
+  },
+  {
+    path: 'convertisseur-list',
+    loadChildren: () => import('./pages/convertisseur-list/convertisseur-list.module').then( m => m.ConvertisseurListPageModule)
   }
 ];
 
