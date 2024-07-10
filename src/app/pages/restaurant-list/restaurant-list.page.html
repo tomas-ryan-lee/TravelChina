@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+	<ion-toolbar>
+		<ion-title>Liste des restaurants</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+	<ion-header collapse="condense">
+		<ion-toolbar>
+			<ion-title size="large">Liste des restaurants</ion-title>
+		</ion-toolbar>
+	</ion-header>
+
+	<ion-card *ngFor="let item of list" [id]="item.restaurantsId">
+		<img *ngIf="item.heroImgUrl" [src]="item.heroImgUrl" [alt]="item.name">
+		<ion-card-header>
+			<ion-card-title [innerHTML]="item.name">Titre</ion-card-title>
+			<ion-card-subtitle>
+				<span class="resto-type" *ngFor="let type of item.establishmentTypeAndCuisineTags" [innerHTML]="type"></span>
+			</ion-card-subtitle>
+		</ion-card-header>
+		<ion-card-content>
+			<ul>
+				<li>Note : <span [innerHTML]="item.averageRating"></span>/5</li>
+			</ul>
+		</ion-card-content>
+		<ion-button fill="clear" *ngIf="item.menuUrl" (click)="app.openSite(item.menuUrl)">Voir le menu</ion-button>
+	</ion-card>
+
+</ion-content>
