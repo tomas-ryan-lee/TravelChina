@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public appPages = [
     { title: 'Liste des restaurants', url: '/restaurants', icon: 'restaurant' },
+    { title: 'Convertisseur de monnaie', url: '/convertisseur', icon: 'cash' },
   ];
   constructor() {}
 }
