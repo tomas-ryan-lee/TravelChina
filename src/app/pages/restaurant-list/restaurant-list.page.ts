@@ -32,7 +32,6 @@ export class RestaurantListPage implements OnInit {
 		try {
 			const response = await axios.request(options);
 			this.list = response.data.data.data;
-			console.log(response.data.data.data);
 		} catch (error) {
 			console.error(error);
 		}
