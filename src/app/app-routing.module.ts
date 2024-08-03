@@ -21,6 +21,10 @@ const routes: Routes = [
   },  {
     path: 'cultural-guide',
     loadChildren: () => import('./pages/cultural-guide/cultural-guide.module').then( m => m.CulturalGuidePageModule)
+  },
+  {
+    path: 'travel-notes',
+    loadChildren: () => import('./pages/travel-notes/travel-notes.module').then( m => m.TravelNotesPageModule)
   }
 
 ];
